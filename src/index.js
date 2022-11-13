@@ -6,14 +6,21 @@ import './App.css'
 import { env } from './env';
 import reportWebVitals from './reportWebVitals';
 
+import { StateProvider } from "./context/StateProvider";
+import reducer, { initialState } from "./context/Reducer";
+
 init(env.three0Config)
-	.then(() => {
-		const container = document.querySelector('#root')
-		const root = createRoot(container)
-		// eslint-disable-next-line react/jsx-filename-extension
-		root.render(<App />)
-	})
-	.catch(console.error)
+  .then(() => {
+    const container = document.querySelector('#root')
+    const root = createRoot(container)
+    // eslint-disable-next-line react/jsx-filename-extension
+    root.render(
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </StateProvider>
+    )
+  })
+  .catch(console.error)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
