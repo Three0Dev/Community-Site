@@ -1,42 +1,18 @@
-import './App.css';
-import { Auth } from "@three0dev/js-sdk";
-import { useEffect, useState } from 'react';
-import { CircularProgress } from "@material-ui/core";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home.jsx";
 
 function App() {
-  const [userID, setUserID] = useState(null);
-  const [logoutLoading, setLogoutLoading] = useState(false);
-
-  // Update userID because Auth.login
-  useEffect(() => {
-    if(Auth.isLoggedIn()) {
-      setUserID(Auth.getAccountId());
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
     }
-  }, [userID]);
-
-  const login = async () => {
-    if(Auth.isLoggedIn()) {
-      setLogoutLoading(true);
-      await Auth.logout().then(() => {
-        setUserID(null);
-        setLogoutLoading(false);
-      });
-    } else {
-      Auth.login();
-    }
-  }
+  ]);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <button onClick={login}>
-          {
-          userID ? 
-          (logoutLoading ? <CircularProgress/> : 
-          "Logout of " + userID.split(".")[0]): 
-          "Login with Near"}
-        </button>
-      </header>
+      <RouterProvider router={router} />
     </div>
   );
 }
