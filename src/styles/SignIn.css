@@ -1,0 +1,79 @@
+.sign-in-card {
+  width: 450px;
+  height: 600px;
+  background-color: #363144;
+  border-radius: 10px;
+}
+
+.sign-in-card-header {
+  color: #B2ADC8;
+  font-family: Helvetica;
+  font-size: 80px;
+  margin-left: 40px;
+  padding-top: 75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.sign-in-card-body {
+  color: #AFADBB;
+  font-family: Helvetica;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.sign-in-card-button {
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  vertical-align: middle;
+  width: 375px;
+  height: 50px;
+  border-color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.sign-in-card-content-container {
+  display: flex;
+}
+
+.sign-in-card-NEAR-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.sign-in-card-content {
+  font-size: 18px;
+  margin-top: 14px;
+}
+
+.sign-in-card-info-container {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+}
+
+.sign-in-card-info {
+  color: #AFADBB;
+  font-size: 16px;
+  margin-top: 0px;
+  margin-right: 4px;
+  margin-left: 40px;
+}
+
+.sign-in-card-info-link {
+  color: #8DD88B;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.sign-in-card-three0-logo {
+  position: absolute;
+  bottom: -82px;
+  right: -63px;
+  width: 350px;
+  opacity: 0.5;
+}
