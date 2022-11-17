@@ -7,14 +7,14 @@ function SignIn() {
   const [dispatch] = useStateValue();
 
   const login = async () => {
-    Auth.login().then(() => {
-      dispatch({
-        type: "SET_USER",
-        user: {
-          _id: Auth.getAccountId()
-        }
-      })
-    })
+    // Auth.login().then(() => {
+    //   dispatch({
+    //     type: "SET_USER",
+    //     user: {
+    //       _id: Auth.getAccountId()
+    //     }
+    //   })
+    // })
   }
 
   return (
