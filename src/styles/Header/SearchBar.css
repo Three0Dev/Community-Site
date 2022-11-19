@@ -1,0 +1,62 @@
+
+.search-bar-container{
+    background: rgba(203, 197, 243, 0.55);
+    position: absolute;
+    width: 100%;
+    /* opacity: 80%; */
+}
+.search-bar-wrapper{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+}
+.search-input-box{
+    flex-grow: 5;
+    align-self: start;
+    width: 100%;
+    height: 12.25rem;
+    display: flex;
+    padding-top: 25px;
+    /* margin-bottom: -62px;
+    margin-top: -25px; */
+}
+
+.search-bar-wrapper .search-input-box input, input:focus{
+width: 100%;
+outline: none;
+border-color: transparent;
+background-color: transparent;
+font-family: 'Euphemia UCAS';
+font-style: normal;
+font-weight: 400;
+font-size: 170px;
+line-height: 348px;
+
+color:#6851C4;
+}
+
+input::placeholder{
+    margin-top:10px;
+    color:inherit;
+    font-size: inherit;
+    font-size: 228px;
+}
+.search-bar-wrapper .mini-search-title{
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    color: #332B48;
+    align-self: start;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+    height: fit-content;
+    margin-left: 10px;
+    margin-top: 30px
+}
+
+.search-bar-wrapper .mini-search-title.hidden{
+    opacity: 0;;
+}
