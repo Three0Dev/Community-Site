@@ -54,6 +54,7 @@
   top: 12%;
   overflow: hidden;
   transition: top 1s;
+  z-index: 10;
 }
 
 .sign-in-container-hidden {
@@ -61,4 +62,5 @@
   right: 40px;
   top: 100%;
   transition: top 1s;
+  z-index: 10;
 }
