@@ -2,7 +2,7 @@ import "../../styles/Header/SearchBar.css"
 import React from "react";
 import { useEffect } from "react";
 
-function Search(){
+function SearchBar(){
     const [inputValue, setInputValue] = React.useState('');
     const search = async (e) =>{
         // e.preventDefault();
@@ -12,7 +12,7 @@ function Search(){
     useEffect(() =>{
         if (inputValue){
             // this is where we filter dater
-            console.log("filtering data", inputValue);
+            // console.log("filtering data", inputValue);
         }
 
 
@@ -36,4 +36,4 @@ function Search(){
 }
 
 
-export default Search
+export default SearchBar
