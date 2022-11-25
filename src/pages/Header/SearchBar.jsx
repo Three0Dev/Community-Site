@@ -1,9 +1,9 @@
 import "../../styles/Header/SearchBar.css"
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function SearchBar(){
-    const [inputValue, setInputValue] = React.useState('');
+    const [inputValue, setInputValue] = useState('');
     const search = async (e) =>{
         // e.preventDefault();
         alert("you searched", inputValue);
@@ -23,10 +23,11 @@ function SearchBar(){
         <div className="search-bar-wrapper">
             <div className={inputValue=="" ? "mini-search-title" : "mini-search-title hidden" }>
                 <b>explore</b>
-            </div>
+            </div>  
             <div className="search-input-box">
-                <input autoFocus placeholder="three0" onChange={(e)=>
-                setInputValue(e.target.value)}>
+                <label className={inputValue=="" ? "placeholder": "placeholder hidden"}>three0</label>
+                <input type="text" autoFocus onChange={(e)=>
+                    setInputValue(e.target.value)}>
                 </input>
             </div>
         </div>
