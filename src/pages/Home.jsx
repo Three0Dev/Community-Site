@@ -11,6 +11,7 @@ function Home() {
       <NavBar />
       <SearchBar />
       <FilterBar />
+      <MainBody/>
     </div>
   )
 }

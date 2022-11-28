@@ -1,7 +1,7 @@
 import "../../styles/Body/ProjectCard.css"
 
 import React, { useState } from "react";
-
+// i think this needs to be link clickable
 function ProjectCard({ title, creator, id, imgLink, tags }) {
   const [isHovered, setIsHovered] = useState(false);
 

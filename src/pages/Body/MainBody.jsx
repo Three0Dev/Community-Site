@@ -35,7 +35,7 @@ function MainBody(){
 // return map each project to ProjectCard
 // function and return html result
     return ( 
-    <section>
+    <div className="main-body">
         {projects.map((project) => 
         <ProjectCard key={project.id}
          title={project.title} 
@@ -43,7 +43,7 @@ function MainBody(){
         id={project.id} 
         imgLink={project.imgLink} 
         tags={project.tags}/> )}
-    </section>
+    </div>
     )
 }
 

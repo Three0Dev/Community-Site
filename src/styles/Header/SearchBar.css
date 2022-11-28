@@ -1,8 +1,9 @@
 .search-bar-container {
   background: rgba(203, 197, 243, 0.55);
-  position: absolute;
+  position: relative;
   width: 100%;
   opacity: 80%;
+
 }
 
 .search-bar-wrapper {
