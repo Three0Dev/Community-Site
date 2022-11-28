@@ -3,7 +3,7 @@ import SearchBar from "./Header/SearchBar";
 import NavBar from "./Header/NavBar";
 import ProjectCard from "./Body/ProjectCard";
 import MainBody from "./Body/MainBody";
-import Filter from "./Header/FilterBar";
+import FilterBar from "./Header/FilterBar";
 
 function Home() {
   return (
