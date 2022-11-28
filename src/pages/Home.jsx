@@ -3,11 +3,14 @@ import SearchBar from "./Header/SearchBar";
 import NavBar from "./Header/NavBar";
 import ProjectCard from "./Body/ProjectCard";
 import MainBody from "./Body/MainBody";
+import Filter from "./Header/FilterBar";
+
 function Home() {
   return (
     <div className="home">
       <NavBar />
       <SearchBar />
+      <FilterBar />
     </div>
   )
 }
