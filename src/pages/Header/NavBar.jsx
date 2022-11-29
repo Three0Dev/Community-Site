@@ -6,6 +6,7 @@ import { CircularProgress } from "@material-ui/core";
 import { Auth } from "@three0dev/js-sdk";
 import SignIn from "../SignIn";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [{ user }, dispatch] = useStateValue();
@@ -42,8 +43,8 @@ function NavBar() {
     <div className="navbar-container">
       <div className="navigation-side">
         <img className="nav-logo" src="images/three0logo.svg" alt="three0 logo" />
-        <p className="page-redirect">discover</p>
-        <p className="page-redirect">resources</p>
+        <Link className="page-redirect" to={"/"}>discover</Link>
+        <Link className="page-redirect" to={"/resources"}>resources</Link>
       </div>
       <div className="authentication-side">
         {user ?
