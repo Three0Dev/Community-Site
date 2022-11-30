@@ -2,7 +2,7 @@ import { Database } from "@three0dev/js-sdk";
 import ProjectCard from "./ProjectCard";
 import "../../styles/Body/MainBody.css";
 import "../../styles/Header/SearchBar.css";
-import "../../styles/Header/NavBar.css";
+import "../../styles/Header/FilterBar.css"
 
 import { useEffect, useState } from "react";
 
@@ -14,10 +14,8 @@ function MainBody() {
   const [activeTags, setActiveTags] = useState([]);
 
   function updateActiveTags(e){
-    // console.log(e.target.value);
     const clickedTag = e.target.value;
-    // if tag is already active we set it back to non-active
-    // console.log(clickedTag);
+    // if tag is already active we remove from list of active tags
     if (activeTags.includes(clickedTag)){
       const filteredTags = activeTags.filter( tag_ => tag_ != clickedTag );
       setActiveTags(filteredTags);
@@ -26,58 +24,40 @@ function MainBody() {
       setActiveTags((activeTags) => [...activeTags, clickedTag]);
     }
   }
-
-  useEffect(()=>{
-    // tags filtering
-    console.log(activeTags);
-    setActiveProjects(projects);
-    for (let i = 0; i < activeTags.length; i++) {
-      setActiveProjects(activeProjects.filter(proj =>
-        proj.tags.includes(activeTags[i].toLowerCase())));
-    }
-
-    // query filtering
-    if (inputValue != ""){
-      const filteredProjects = activeProjects.filter(proj =>
-        proj.title.toLowerCase().includes(inputValue.toLowerCase()));
-        setActiveProjects(filteredProjects);
-    }
-  }, [activeTags, inputValue])
-
   useEffect(() => {
 
-    // retrieve apps and tags from three0
+    // retrieve apps details and tags from three0
     // set database change listener
     const projs = [{
-      title: "Title 1",
-      creator: "creator 1",
+      title: "Three0Pinner",
+      creator: "Three0",
       id: "12345",
       imgLink: "images/testImage.jpg",
-      tags: ["first post"]
+      tags: ["pinner"]
     }, {
-      title: "Title 2",
-      creator: "creator 2",
+      title: "Tweeter",
+      creator: "Three0",
       id: "56789",
       imgLink: "images/testImage.jpg",
-      tags: ["second post"]
+      tags: ["chat", "twitter"]
     }, {
-      title: "Title 3",
-      creator: "creator 3",
+      title: "React-Three0-Chat",
+      creator: "Three0",
       id: "01010101",
       imgLink: "images/testImage.jpg",
-      tags: ["thrid post"]
+      tags: ["chat", "three0", "react"]
     }, {
-      title: "Title 4",
-      creator: "creator 4",
+      title: "Whatsapp 3.0",
+      creator: "kelechi",
       id: "232354553",
       imgLink: "images/testImage.jpg",
-      tags: ["fourth post"]
+      tags: ["whatsapp","chat"]
     }, {
-      title: "Title 5",
-      creator: "creator 5",
+      title: "Amazon 3.0",
+      creator: "Emil and Ben",
       id: "2342312",
       imgLink: "images/testImage.jpg",
-      tags: ["fifth post"]
+      tags: ["amazon", "database"]
     }, {
       title: "Title 6",
       creator: "creator 6",
@@ -90,8 +70,28 @@ function MainBody() {
     setActiveProjects(projs);
   }, []);
 
-  // map each project to ProjectCard
-  // function and return html result
+  // filters search and tags
+  useEffect(()=>{
+    if (projects.length != 0){
+      let filteredProjects = projects;
+      
+      // filter tags
+      for (let i = 0; i < activeTags.length; i++) {
+        filteredProjects = filteredProjects.filter(proj =>
+          proj.tags.includes(activeTags[i])); 
+      }
+      
+      // filter search
+      if
+       (inputValue != ""){
+        filteredProjects = filteredProjects.filter(proj =>
+          proj.title.toLowerCase().includes(inputValue.toLowerCase()));
+      }
+      setActiveProjects(filteredProjects);
+    }
+  }, [activeTags, inputValue]);
+
+
   return (
     <div className="main-body">
 
@@ -103,18 +103,18 @@ function MainBody() {
                     <div className="search-input-box">
                         <label className={inputValue=="" ? "placeholder": "placeholder hidden"}>three0</label>
                         <input type="text" autoFocus onChange={(e)=>
-                            /*filter data*/setInputValue(e.target.value)}>
+                            setInputValue(e.target.value)}>
                         </input>
                     </div>
                 </div>
         </div>
         <div className="filter-bar-container">
             <div className="filter-bar-wrapper">
-                <p classname="filter-header">filter:</p>
+                <p className="filter-header">filter:</p>
                 {tags.map( (tag) => {
                     return <button className={
                         activeTags.includes(tag) == true? "filter-tag active": "filter-tag"}
-                       value={tag} onClick={(e) => updateActiveTags(e)}>{tag}</button>
+                       value={tag} key={tag} onClick={(e) => updateActiveTags(e)}>{tag}</button>
                 })}
             </div>
         </div>
