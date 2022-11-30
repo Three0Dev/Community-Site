@@ -5,8 +5,6 @@ import FilterBar from "./Header/FilterBar";
 function DiscoverPage() {
   return (
     <div>
-      <SearchBar />
-      <FilterBar />
       <MainBody />
     </div>
   )

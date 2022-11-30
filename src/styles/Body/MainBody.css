@@ -1,8 +1,7 @@
-.main-body{
+.cards-body{
     position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
+    flex-flow: row wrap;
+    /* justify-items: end; */
+    /* justify-content: space-around; */
 }

@@ -27,7 +27,13 @@
 }
 
 .filter-tag {
+    width: 10vh;
     margin-left: 3vh;
     margin-right: 15vh;
     color: #C5C2D2;
+    background-color: initial;
+    transition: background-color 150ms ease-in-out;
+}
+.filter-tag.active{
+    background-color:#a899e9;
 }
