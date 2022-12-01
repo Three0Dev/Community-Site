@@ -63,3 +63,8 @@
 .project-tags {
   text-align: left;
 }
+
+.project-card-link {
+  color: black;
+  text-decoration: none;
+}
