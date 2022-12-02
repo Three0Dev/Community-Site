@@ -3,13 +3,13 @@ import "../../styles/Body/ProjectCard.css"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function ProjectCard({ title, creator, id, imgLink, tags }) {
+function ProjectCard({ title, creator, id, imgLink, tags, url }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
       className={isHovered ? "project-card" : "project-card unfocused"}>
-      <Link className="project-card-link" to={`/project/${id}`}>
+      <a className="project-card-link" href={url}>
         <div>
           <img className="project-thumbnail" src={imgLink} alt="project thumbnail" />
         </div>
@@ -27,7 +27,7 @@ function ProjectCard({ title, creator, id, imgLink, tags }) {
             {tags.map((tag) => tag + " ")}
           </div>
         }
-      </Link>
+      </a>
     </div>
   )
 }
