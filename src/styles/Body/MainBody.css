@@ -2,6 +2,11 @@
     position: relative;
     display: flex;
     flex-flow: row wrap;
+    padding: 2rem 3rem;
+
+    /* justify-content: center;
+    align-items: stretch; */
+
     /* justify-items: end; */
     /* justify-content: space-around; */
 }

@@ -2,7 +2,7 @@ import { Database } from "@three0dev/js-sdk";
 import ProjectCard from "./ProjectCard";
 import "../../styles/Body/MainBody.css";
 import "../../styles/Header/SearchBar.css";
-import "../../styles/Header/FilterBar.css"
+import "../../styles/Header/FilterBar.css";
 
 import { useEffect, useState } from "react";
 

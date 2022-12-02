@@ -1,0 +1,22 @@
+ .footer-container{
+    /* position: fixed; */
+    
+    /* width: auto;
+    height: 2vh; */
+    display: flex;
+    flex-direction: row;
+    padding: 0.1vw 6vw;
+    background-color: #332B48;
+    align-items: center;
+} 
+
+.footer-link{
+    font-family:'Open Sans', sans-serif;;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6vh;
+    
+    margin: 5px 15px 5px 5px;
+    text-decoration: none;
+    color: #A09EAB;
+}
