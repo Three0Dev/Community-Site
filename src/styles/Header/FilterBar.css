@@ -4,6 +4,7 @@
   /* width: 100%; */
   height: 8vh;
   /* position: relative; */
+  margin-bottom: -15px;
 }
 
 .filter-bar-wrapper {
