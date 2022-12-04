@@ -24,7 +24,7 @@ function ProjectCard({ title, creator, id, imgLink, tags, url }) {
             </div>
           </div> :
           <div className="project-tags">
-            {tags.map((tag) => tag + " ")}
+            {tags.map((tag) => "#" + tag + " ")}
           </div>
         }
       </a>

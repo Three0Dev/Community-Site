@@ -65,7 +65,7 @@ function MainBody() {
       url: "https://github.com/emil-velasquez/amazon-clone-three0"
     },];
     setProjects(projs);
-    setTags(["post", "#tag1"]);
+    setTags(["chat", "#tag1"]);
     setActiveProjects(projs);
   }, []);
 
