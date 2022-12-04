@@ -19,6 +19,7 @@
   font-style: normal;
   flex-grow: 5;
   align-self: start;
+  padding-bottom: 13px;
 }
 
 .search-bar-wrapper .search-input-box input,
@@ -50,9 +51,11 @@ label.placeholder {
   position: absolute;
   z-index: 1;
 }
-label.placeholder.hidden{
+
+label.placeholder.hidden {
   opacity: 0;
 }
+
 .search-bar-wrapper .mini-search-title {
   padding-left: 5vw;
   font-family: 'Fredoka';

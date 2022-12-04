@@ -1,39 +1,40 @@
 .filter-bar-container {
-    background-color: white;
-    border: 2px solid rgba(71, 157, 69, 0.5);
-    /* width: 100%; */
-    height: 8vh;
-    /* position: relative; */
-    top: 32vh;
+  background-color: #332B48;
+  border: 2px solid #503AA78C;
+  /* width: 100%; */
+  height: 8vh;
+  /* position: relative; */
 }
 
 .filter-bar-wrapper {
-    font-family: 'Fredoka';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 25px;
-
-    color: #000000;
-
-    padding-left: 5vw;
-
-    display: flex;
-    flex-direction: row;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  color: #000000;
+  padding-left: 5vw;
+  display: flex;
+  flex-direction: row;
 }
 
 .filter-header {
-    flex: initial;
+  align-items: left;
+  color: #B2ADC8
 }
 
 .filter-tag {
-    width: 10vh;
-    margin-left: 3vh;
-    margin-right: 15vh;
-    color: #C5C2D2;
-    background-color: initial;
-    transition: background-color 150ms ease-in-out;
+  width: 10vh;
+  height: 8vh;
+  margin-left: 3vh;
+  margin-right: 15vh;
+  color: #B2ADC8;
+  background-color: initial;
+  transition: background-color 150ms ease-in-out;
+  border: transparent;
 }
-.filter-tag.active{
-    background-color:#a899e9;
+
+.filter-tag.active {
+  background-color: #a899e9;
+  color: #503AA78C
 }
