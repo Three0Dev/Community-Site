@@ -32,35 +32,35 @@ function MainBody() {
       title: "Three0Pinner",
       creator: "Three0",
       id: "12345",
-      imgLink: "images/testImage.jpg",
+      imgLink: "images/three0logo.svg",
       tags: ["pinner"],
       url: "https://github.com/Three0Dev/Three0Pinner"
     }, {
       title: "Tweeter",
       creator: "Three0",
       id: "56789",
-      imgLink: "images/testImage.jpg",
+      imgLink: "images/three0logo.svg",
       tags: ["chat", "twitter"],
       url: "https://github.com/Three0Dev/Tweeter"
     }, {
       title: "React-Three0-Chat",
       creator: "Three0",
       id: "01010101",
-      imgLink: "images/testImage.jpg",
+      imgLink: "images/three0logo.svg",
       tags: ["chat", "three0", "react"],
       url: "https://github.com/Three0Dev/React-Three0-Chat"
     }, {
       title: "Whatsapp 3.0",
       creator: "kelechi",
       id: "232354553",
-      imgLink: "images/testImage.jpg",
+      imgLink: "images/three0logo.svg",
       tags: ["whatsapp", "chat"],
       url: "https://github.com/Kelach/whatsapp-clone"
     }, {
       title: "Amazon 3.0",
       creator: "Emil and Ben",
       id: "2342312",
-      imgLink: "images/testImage.jpg",
+      imgLink: "images/three0logo.svg",
       tags: ["amazon", "database"],
       url: "https://github.com/emil-velasquez/amazon-clone-three0"
     },];
