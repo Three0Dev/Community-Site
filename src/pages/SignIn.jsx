@@ -6,16 +6,16 @@ import { Auth } from "@three0dev/js-sdk";
 function SignIn() {
   const [dispatch] = useStateValue();
 
-  const login = async () => {
-    // Auth.login().then(() => {
-    //   dispatch({
-    //     type: "SET_USER",
-    //     user: {
-    //       _id: Auth.getAccountId()
-    //     }
-    //   })
-    // })
-  }
+  const login = (e) => {
+    Auth.login().then(() => {
+      dispatch({
+        type: "SET_USER",
+        user: {
+          _id: Auth.getAccountId()
+        }
+      })
+    })
+  };
 
   return (
     <div className="sign-in-card">

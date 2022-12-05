@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
-    "@three0dev/js-sdk": "^0.2.0-alpha",
+    "@three0dev/js-sdk": "file:../JS-SDK",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",

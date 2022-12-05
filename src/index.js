@@ -9,25 +9,25 @@ import { StateProvider } from "./context/StateProvider";
 import reducer, { initialState } from "./context/Reducer";
 
 import ReactDOM from 'react-dom/client';
-// init(env.three0Config)
-//   .then(() => {
-//     const container = document.querySelector('#root')
-//     const root = createRoot(container)
-//     // eslint-disable-next-line react/jsx-filename-extension
-//     root.render(
-//       <StateProvider initialState={initialState} reducer={reducer}>
-//         <App />
-//       </StateProvider>
-//     )
-//   })
-//   .catch(console.error)
+init(env.three0Config)
+  .then(() => {
+    const container = document.querySelector('#root')
+    const root = createRoot(container)
+    // eslint-disable-next-line react/jsx-filename-extension
+    root.render(
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </StateProvider>
+    )
+  })
+  .catch(console.error)
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
-  </StateProvider>
-);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <StateProvider initialState={initialState} reducer={reducer}>
+//       <App />
+//   </StateProvider>
+// );
 
 
 // If you want to start measuring performance in your app, pass a function
