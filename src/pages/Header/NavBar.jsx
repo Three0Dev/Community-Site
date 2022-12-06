@@ -13,30 +13,30 @@ function NavBar() {
   const [isSigningIn, setIsSigningIn] = useState(false);
   const [isSigningOut, setIsSigningOut] = useState(false);
 
-  // useEffect(() => {
-  //   if (Auth.isLoggedIn()) {
-  //     dispatch({
-  //       type: "SET_USER",
-  //       user: {
-  //         _id: Auth.getAccountId()
-  //       }
-  //     })
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (Auth.isLoggedIn()) {
+      dispatch({
+        type: "SET_USER",
+        user: {
+          _id: Auth.getAccountId()
+        }
+      })
+    }
+  }, []);
 
   function signIn() {
     setIsSigningIn(!isSigningIn);
   }
 
   async function signOut() {
-    // setIsSigningOut(true);
-    // await Auth.logout().then(() => {
-    //   dispatch({
-    //     type: "SET_USER",
-    //     user: null,
-    //   });
-    //   setIsSigningOut(false);
-    // });
+    setIsSigningOut(true);
+    await Auth.logout().then(() => {
+      dispatch({
+        type: "SET_USER",
+        user: null,
+      });
+      setIsSigningOut(false);
+    });
   }
 
   return (
