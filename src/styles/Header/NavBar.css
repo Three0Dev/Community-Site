@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Euphemia;
+  src: url(../../EuphemiaUCAS.ttf);
+}
+
 .navbar-container {
   margin: 0px;
   padding: 0px;
@@ -43,7 +48,7 @@
   height: 40px;
 
   color: #DBD9F0;
-  font-family: Helvetica;
+  font-family: Euphemia;
 }
 
 .authentication-buttons:hover {

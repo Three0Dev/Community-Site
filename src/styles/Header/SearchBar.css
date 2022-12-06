@@ -1,9 +1,14 @@
+@font-face {
+  font-family: Euphemia;
+  src: url(../../EuphemiaUCAS.ttf);
+}
+
+
 .search-bar-container {
   background: rgba(203, 197, 243, 0.55);
   position: relative;
   width: 100%;
   opacity: 80%;
-
 }
 
 .search-bar-wrapper {
@@ -15,7 +20,7 @@
 
 .search-input-box {
   position: relative;
-  font-family: 'Euphemia UCAS';
+  font-family: Euphemia;
   font-style: normal;
   flex-grow: 5;
   align-self: start;
@@ -40,9 +45,9 @@ input:focus {
 }
 
 label.placeholder {
-  font-family: 'Euphemia UCAS';
+  font-family: Euphemia;
   left: 5%;
-  top: -15%;
+  top: -40%;
   color: #6851C4;
   opacity: 75%;
   font-size: clamp(7.5rem, 25vw, 18.5rem);
@@ -58,7 +63,7 @@ label.placeholder.hidden {
 
 .search-bar-wrapper .mini-search-title {
   padding-left: 5vw;
-  font-family: 'Fredoka';
+  font-family: Euphemia;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -66,7 +71,8 @@ label.placeholder.hidden {
   align-self: start;
   transition: opacity 350ms ease-in-out;
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 20px;
 }
 
 .search-bar-wrapper .mini-search-title.hidden {

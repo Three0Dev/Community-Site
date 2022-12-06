@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Euphemia;
+  src: url(../EuphemiaUCAS.ttf);
+}
+
 .sign-in-card {
   width: 450px;
   height: 600px;
@@ -7,7 +12,7 @@
 
 .sign-in-card-header {
   color: #B2ADC8;
-  font-family: Helvetica;
+  font-family: Euphemia;
   font-size: 80px;
   margin-left: 40px;
   padding-top: 75px;
@@ -18,7 +23,7 @@
 
 .sign-in-card-body {
   color: #AFADBB;
-  font-family: Helvetica;
+  font-family: Euphemia;
   font-size: 16px;
   text-align: left;
   margin-left: 40px;

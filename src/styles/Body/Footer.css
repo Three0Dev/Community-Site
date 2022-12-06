@@ -1,24 +1,29 @@
- .footer-container {
-   position: fixed;
-   bottom: 0px;
+@font-face {
+  font-family: Euphemia;
+  src: url(../../EuphemiaUCAS.ttf);
+}
 
-   width: 100vw;
-   display: flex;
-   flex-direction: row;
-   padding: 0.1vw 6vw;
-   background-color: hsl(257, 25%, 23%);
-   align-items: center;
-   z-index: 5;
- }
 
- .footer-link {
-   font-family: 'Open Sans', sans-serif;
-   ;
-   font-style: normal;
-   font-weight: 400;
-   font-size: 1.6vh;
+.footer-container {
+  position: fixed;
+  bottom: 0px;
 
-   margin: 5px 15px 5px 5px;
-   text-decoration: none;
-   color: #A09EAB;
- }
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding: 0.1vw 6vw;
+  background-color: hsl(257, 25%, 23%);
+  align-items: center;
+  z-index: 5;
+}
+
+.footer-link {
+  font-family: Euphemia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6vh;
+
+  margin: 5px 15px 5px 5px;
+  text-decoration: none;
+  color: #A09EAB;
+}
